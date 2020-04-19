@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>TouchScroll</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/viewer.css" />
+</head>
+
+<body>
+    <div class="viewer no-select" id="viewer">
+
+    </div>
+    <script src="js/TouchScroll.js"></script>
+    <script>
+        var ele = '<div class="view" alt="" draggable="false" id="photo"></div>';
+        var j = '';
+        for (var i = 0; i < 50; i++) {
+            j += ele;
+        }
+        document.getElementById('viewer').innerHTML = j;
+        var viewer = new TouchScroll();
+        viewer.init({
+            id: 'viewer',
+            draggable: true,
+            wait: false
+        });
+    </script>
+</body>
+
+</html>
